@@ -12,7 +12,7 @@ export default function Contact() {
       )
       .join("&");
   }
-  function handleSubmit() {
+  function handleSubmit(e) {
     e.preventDefault();
     fetch("/", {
       method: "POST",
@@ -44,8 +44,8 @@ export default function Contact() {
                 ADDRESS
               </h2>
               <p className="mt-1">
-                97 Warren St. <br />
-                New York, NY 10007
+                418 Melba St <br />
+                Dallas Tx, 75208
               </p>
             </div>
             <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
@@ -53,12 +53,12 @@ export default function Contact() {
                 EMAIL
               </h2>
               <a className="text-indigo-400 leading-relaxed">
-                reedbarger@email.com
+                rcsantelices@email.com
               </a>
               <h2 className="title-font font-semibold text-white tracking-widest text-xs mt-4">
                 PHONE
               </h2>
-              <p className="leading-relaxed">123-456-7890</p>
+              <p className="leading-relaxed">240-506-0833</p>
             </div>
           </div>
         </div>
@@ -110,7 +110,7 @@ export default function Contact() {
               id="message"
               name="message"
               className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
-              onChange={(e) => setMessagge(e.target.value)}
+              onChange={(e) => setMessage(e.target.value)}
             />
           </div>
           <button
